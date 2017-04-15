@@ -28,13 +28,13 @@
   },
   "bugs": "https://github.com/mathiasbynens/unicode-match-property-value/issues",
   "dependencies": {
-    "unicode-property-value-aliases": "^1.2.1"
+    "unicode-property-value-aliases": "^2.0.0"
   },
   "devDependencies": {
     "ava": "*",
-    "jsesc": "^2.2.0",
-    "unicode-9.0.0": "^0.7.0",
-    "unicode-property-aliases": "^1.1.0"
+    "jsesc": "^2.5.0",
+    "unicode-9.0.0": "^0.7.4",
+    "unicode-property-aliases-ecmascript": "^1.0.0"
   },
   "scripts": {
     "build": "node scripts/build.js",

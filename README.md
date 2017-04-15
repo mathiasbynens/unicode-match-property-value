@@ -1,6 +1,6 @@
 # unicode-match-property-value [![Build status](https://travis-ci.org/mathiasbynens/unicode-match-property-value.svg?branch=master)](https://travis-ci.org/mathiasbynens/unicode-match-property-value)
 
-_unicode-match-property-value_ matches a given Unicode property value or [property value alias](https://github.com/mathiasbynens/unicode-property-value-aliases) to its canonical property value without applying [loose matching](https://github.com/mathiasbynens/unicode-loose-match). Consider it a strict alternative to loose matching.
+_unicode-match-property-value_ matches a given Unicode property value or [property value alias](https://github.com/mathiasbynens/unicode-property-value-aliases) to its canonical property value without applying [loose matching](https://github.com/mathiasbynens/unicode-loose-match), per the algorithm used for [RegExp Unicode property escapes in ECMAScript](https://github.com/tc39/proposal-regexp-unicode-property-escapes). Consider it a strict alternative to loose matching.
 
 ## Installation
 
@@ -26,16 +26,16 @@ This function takes a string `property` that is a canonical/unaliased Unicode pr
 
 ```js
 // Find the canonical property value:
-matchPropertyValue('Block', 'Alphabetic_PF')
-// → 'Alphabetic_Presentation_Forms'
+matchPropertyValue('Script_Extensions', 'Aghb')
+// → 'Caucasian_Albanian'
 
-matchPropertyValue('Block', 'Alphabetic_Presentation_Forms')
-// → 'Alphabetic_Presentation_Forms'
+matchPropertyValue('Script_Extensions', 'Caucasian_Albanian')
+// → 'Caucasian_Albanian'
 
-matchPropertyValue('block', 'Alphabetic_PF') // Note: incorrect casing.
+matchPropertyValue('script_extensions', 'Caucasian_Albanian') // Note: incorrect casing.
 // → throws
 
-matchPropertyValue('Block', 'alphabetic_pf') // Note: incorrect casing.
+matchPropertyValue('Script_Extensions', 'caucasian_albanian') // Note: incorrect casing.
 // → throws
 ```
 
