@@ -1,6 +1,5 @@
 'use strict';
 
-const propertyAliases = require('unicode-property-aliases-ecmascript');
 const valueAliases = require('unicode-property-value-aliases');
 const jsesc = require('jsesc');
 

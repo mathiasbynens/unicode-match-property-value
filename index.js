@@ -1,6 +1,5 @@
 'use strict';
 
-const propertyValueAliases = require('unicode-property-value-aliases');
 const propertyToValueAliases = require('./data/mappings.js');
 
 const matchPropertyValue = function(property, value) {
